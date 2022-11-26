@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.2)
+
+project(C++_STUDY)
+set(ROOT ${PROJECT_SOURCE_DIR})
+set(CMAKE_BUILD_TYPE Debug)
+
+include_directories("${ROOT}/include")
+# link_directories("${ROOT}/src")
+
+file(GLOB ALL_SRC "${ROOT}/src/*.c" "${ROOT}/src/*.cxx" "${ROOT}/src/*.cpp")
+
+add_executable(main main.cpp ${ALL_SRC})
+# target_link_libraries()
